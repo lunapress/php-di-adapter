@@ -1,1 +1,1 @@
-# phpdi
+# LunaPress PHP-DI Adapter

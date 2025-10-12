@@ -1,0 +1,29 @@
+{
+    "name": "lunapress/php-di-adapter",
+    "description": "Adapter package that integrates PHP-DI as the dependency injection implementation",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Onepix",
+            "homepage": "https://onepix.net",
+            "role": "Company"
+        },
+        {
+            "name": "0zd0",
+            "role": "Lead Developer",
+            "homepage": "https://github.com/0zd0"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "LunaPress\\PhpDiAdapter\\": "src/"
+        }
+    },
+    "suggest": {
+    },
+    "require": {
+        "php": "^8.3",
+        "php-di/php-di": "^7.1",
+        "lunapress/foundation": "@dev"
+    }
+}
