@@ -84,12 +84,13 @@ final class PhpDiContainerBuilder implements IContainerBuilder
 
     /**
      * @param array $definitions
+     * @param ContainerInterface|null $container
      * @return ContainerInterface
      * @throws Exception
      */
-    public function mergeRuntime(array $definitions): ContainerInterface
+    public function mergeRuntime(array $definitions, ?ContainerInterface $container = null): ContainerInterface
     {
-        $container = $this->builder->build();
+        $container ??= $this->builder->build();
 
         foreach ($definitions as $id => $value) {
             $container->set($id, $value);
