@@ -82,23 +82,6 @@ final class PhpDiContainerBuilder implements IContainerBuilder
         return $this->cacheEnabled;
     }
 
-    /**
-     * @param array $definitions
-     * @param ContainerInterface|null $container
-     * @return ContainerInterface
-     * @throws Exception
-     */
-    public function mergeRuntime(array $definitions, ?ContainerInterface $container = null): ContainerInterface
-    {
-        $container ??= $this->builder->build();
-
-        foreach ($definitions as $id => $value) {
-            $container->set($id, $value);
-        }
-
-        return $container;
-    }
-
     private function convertDefinition(IDefinition $definition): AutowireDefinitionHelper|FactoryDefinitionHelper
     {
         return match (true) {
